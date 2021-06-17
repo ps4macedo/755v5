@@ -21,7 +21,7 @@
 }
 .button:hover{
   font-size:22px;
-  background:#242424;
+  background:#000064;
   border:2px solid #ffffff;
   box-shadow:0 5px 0 #cccccc;
   color:white;
@@ -177,7 +177,7 @@ input{
 
 
 		.bg {
-			background-color:#000000;
+			background-color:#000024;
 			background-image:url(bg1.png);
 			background-attachment: fixed;
 			background-size:100%;
@@ -199,13 +199,13 @@ input{
 		  margin: auto;
 		}
        #Progress {
-		  color: #8aff75;
+		  color: #ffffff;
 		}
 
 		#myBar {
 		  width: 0%;
 		  height: 40px;
-		  background-color: #2b417a;
+		  background-color: #172342;
 		  text-align: center;
 		  line-height: 30px;
 		  color: #ff5757;
@@ -219,9 +219,9 @@ input{
 </head>
 <body onload="go()" class="bg">
 	<script>
-		window.applicationCache.ondownloading=function(){document.getElementById("progress").innerHTML="Instalando Cache Offline... <font color=\"#ee596f\"> Aguarde!!!</font>";localStorage.is755Cached=false;};
+		window.applicationCache.ondownloading=function(){document.getElementById("progress").innerHTML="Instalando Cache Offline... <font color=\"#ee596f\"> Aguarde!!!</font>";};
 		window.applicationCache.onprogress=function(a){document.getElementById("myBar").style.width=(Math.round(100*(a.loaded/a.total)))+"%";document.getElementById("myBar").innerHTML=(Math.round(100*(a.loaded/a.total)))+"%";};
-		window.applicationCache.oncached=function(){document.getElementById("progress").innerHTML="Cache <font color=\"#ee596f\">instalada</font> com sucesso!!!";localStorage.is755Cached=true;setTimeout(function(){document.getElementById("progress").innerHTML="Saia com o CIRCULO, desabilite a REDE, <font color=\"#ee596f\"size=\"6\">DESLIGUE O PS4 e AGUARDE 1 MINUTO</font>,<br>Ligue o PS4, ative o THE PLAYROOM e retorne ao Navegador de Internet."; }, 2600);};
+		window.applicationCache.oncached=function(){document.getElementById("progress").innerHTML="Cache <font color=\"#ee596f\">instalada</font> com sucesso!!!";setTimeout(function(){document.getElementById("progress").innerHTML="Saia com o CIRCULO, desabilite a REDE, <font color=\"#ee596f\"size=\"6\">DESLIGUE O PS4 e AGUARDE 1 MINUTO</font>,<br>Ligue o PS4, ative o THE PLAYROOM e retorne ao Navegador de Internet."; }, 2600);};
 	</script>
 	<script>
 		var width = 0;
@@ -259,9 +259,8 @@ input{
 			setTimeout(function(){document.getElementById("progress").innerHTML="Explorações concluídas!!! <font color=\"#ee596f\">Selecione uma CARGA ÚTEL.</font>";}, 1000);
 			document.getElementById("myProgress").remove();
 			document.getElementById('load').innerHTML='<tr>'+
-					'<td><br/></td></tr>'+
 					'<tr>'+
-					'<td><h1 style=\'font-size:27px;text-align:center;\'><u><font color="#6089f6">CARGAS ÚTEIS</font></u></h1></td>'+
+					'<td><div style=\'font-size:28px;text-align:center;\'><b><font color="#6089f6">CARGAS ÚTEIS</font></b></div></td>'+
 					'</tr>'+
 					'<tr><td><hr size="1" color="#6089f6"></td></tr>'+
 					'<tr><td><br/></td></tr>'+
@@ -272,7 +271,7 @@ input{
 					'<a href="#" id="goldhen2" class="button" onMouseOver="progress.innerHTML=\'Ativa GoldHEN v1.1 (SiSTRo) + FTP\'"; onmouseout="progress.innerHTML=\'PS4MACEDO Jailbreak 7.55 v5\'" onclick="toggle_payload(\'goldhen2\'); return false"><font color="#6089f6">GoldHEN 1.1</font></a>&nbsp;'+
 					'<a href="#" id="mira" class="button" onMouseOver="progress.innerHTML=\'Ativa Mira (AlAzif)\'"; onmouseout="progress.innerHTML=\'PS4MACEDO Jailbreak 7.55 v5\'" onclick="toggle_payload(\'mira\'); return false"><font color="#ee596f">MIRA</font></a>&nbsp;'+
 					'<a href="#" id="mira2" class="button" onMouseOver="progress.innerHTML=\'Ativa Mira + Spoof FW 9.99\'"; onmouseout="progress.innerHTML=\'PS4MACEDO Jailbreak 7.55 v5\'" onclick="toggle_payload(\'mira2\'); return false"><font color="#ee596f">MIRA+</font></a>&nbsp;'+
-					'<a href="#" id="binloader" class="button" onMouseOver="progress.innerHTML=\'Permite enviar arquivos .BIN para o PS4 pela porta 9020.\'"; onmouseout="progress.innerHTML=\'PS4MACEDO Jailbreak 7.55 v5\'" onclick="toggle_payload(\'binloader\'); return false">Bin Loader</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'+
+					'<a href="#" id="binloader" class="button" onMouseOver="progress.innerHTML=\'Permite enviar arquivos .BIN para o PS4 pela porta 9020.\'"; onmouseout="progress.innerHTML=\'PS4MACEDO Jailbreak 7.55 v5 \'" onclick="toggle_payload(\'binloader\'); return false">Bin Loader</a>&nbsp;'+
 					'</td>'+
 					'</tr>'+
 					'<tr><td><br/></td></tr>'+
@@ -310,8 +309,9 @@ input{
 					'<tr><td><br/></td></tr>'+
 					'<tr>'+
 					'<td align="center">'+
-					'<a href="#" id="rif" class="button" onMouseOver="progress.innerHTML=\'Permitindo que o PS4 veja os arquivos de ativação RIF.\'"; onmouseout="progress.innerHTML=\'PS4MACEDO Jailbreak 7.55 v5\'" onclick="toggle_payload(\'rif\'); return false">Rif Renamer</a>&nbsp;'+
-					'<a href="#" id="idu" class="button" onMouseOver="progress.innerHTML=\'Desabilita o modo IDU do console.\'"; onmouseout="progress.innerHTML=\'PS4MACEDO Jailbreak 7.55 v5\'" onclick="toggle_payload(\'idu\'); return false">Exit IDU</a>&nbsp;'+
+					'<a href="#" id="toolbox" class="button" onMouseOver="progress.innerHTML=\'Uma modificação da IU do playstation para ajudar a lançar e desenvolver homebrew.\'"; onmouseout="progress.innerHTML=\'PS4MACEDO Jailbreak 7.55 v6 \'" onclick="toggle_payload(\'toolbox\'); return false">toolbox</a>&nbsp;'+
+					'<a href="#" id="rif" class="button" onMouseOver="progress.innerHTML=\'Permitindo que o PS4 veja os arquivos de ativação RIF.\'"; onmouseout="progress.innerHTML=\'PS4MACEDO Jailbreak 7.55 v5\'" onclick="toggle_payload(\'rif\'); return false"> Rif </a>&nbsp;'+
+					'<a href="#" id="idu" class="button" onMouseOver="progress.innerHTML=\'Desabilita o modo IDU do console.\'"; onmouseout="progress.innerHTML=\'PS4MACEDO Jailbreak 7.55 v5\'" onclick="toggle_payload(\'idu\'); return false"> IDU </a>&nbsp;'+
 					'<a href="#" id="disableaslr" class="button" onMouseOver="progress.innerHTML=\'Desabilita a ASLR do console.\'"; onmouseout="progress.innerHTML=\'PS4MACEDO Jailbreak 7.55 v5\'" onclick="toggle_payload(\'disableaslr\'); return false">Disnale ASLR</a>&nbsp;'+
 					'<a href="#" id="mdumper" class="button" onMouseOver="progress.innerHTML=\'Para despejar e descriptografar todos os módulos de uma vez.\'"; onmouseout="progress.innerHTML=\'PS4MACEDO Jailbreak 7.55 v5\'" onclick="toggle_payload(\'mdumper\'); return false">Module Dumper</a>&nbsp;'+
 					'<a href="#" id="kernelclock" class="button" onMouseOver="progress.innerHTML=\'Corrigi erros decorrente do Relógio.\'"; onmouseout="progress.innerHTML=\'PS4MACEDO Jailbreak 7.55 v5\'" onclick="toggle_payload(\'kernelclock\'); return false">kernelclock</a>&nbsp;'+
@@ -323,14 +323,8 @@ input{
 					'<tr><td><br/></td></tr>'+
 					'<tr><td><br/></td></tr>'+
 					'<tr><td><hr size="1" color="#6089f6"></td></tr>'+
-					'<tr>'+
-					'<td align="center">'+
-					'<font color="#fff" size="2">Link para download (via pc) do <font color="#ee596f"><b>ApplicationCache.db</b></font> que permite usar o host pelo <font color="#ee596f"><b>Guia do Usuário</b></font>.</font><br><a href="https://github.com/ps4macedo/755v4/raw/main/light/ApplicationCache.db" id="ApplicationCache" class="button" onMouseOver="progress.innerHTML=\'Transfira o arquivo via PS4 Explorer para /user/system/webkit/webbrowser/appcache/\'"; onmouseout="progress.innerHTML=\'PS4MACEDO Jailbreak 7.55 v5\'"><font color="#8aff75">&nbsp;&nbsp;&nbsp;&nbsp;host Ps4macedo 755 <font color="#ee596f">v4 light</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></a>&nbsp;'+
-					'<a href="https://github.com/ps4macedo/755v5/raw/main/755v5Full.rar" id="ApplicationCache" class="button" onMouseOver="progress.innerHTML=\'Transfira o arquivo via PS4 Explorer para /user/system/webkit/webbrowser/appcache/\'"; onmouseout="progress.innerHTML=\'PS4MACEDO Jailbreak 7.55 v5\'"><font color="#8aff75">&nbsp;&nbsp;&nbsp;&nbsp;host Ps4macedo 755 <font color="#ee596f">v5 full</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></a>&nbsp;'+
-					'</td>'+
-					'</tr>'+
 					'<tr><td><br/></td></tr>'+
-					'<td><h1 style=\'font-size:22px;text-align:center;\'><font color="#8aff75">Agora use o botão \"PS\" para SAIR e ENTRAR no Navegador de Internet.</font></h1></td>';
+					'<td><h1 style=\'font-size:22px;text-align:center;\'><font color="#ffffff">Agora use o botão <font color="#ee596f">PS</font> para <font color="#ee596f">SAIR e ENTRAR</font>.</font></h1></td>';
 		}
 		
 		window.midExploit = function()
@@ -362,7 +356,7 @@ input{
 	<script src="int64.js"></script>
 	<script src="ps4.js"></script>
 	<h1 id="progress" class="titlehead">Carregando... Por favor, <font color="#ee596f">espere!!!</font></h1>
-	<hr width="90%" size="1" color="#ff5757">
+	<hr width="75%" size="1" color="#ff5757">
 	<button style="opacity:0" id="input1" onfocus="handle2()"></button>
 	<button style="opacity:0" id="input2"></button>
 	<button style="opacity:0" id="input3" onfocus="handle2()"></button>
@@ -370,6 +364,7 @@ input{
 		<option value="value1">Value1</option>
 	</select>
 	<h1 id="myProgress"><div id="myBar">0%</div></h1>
-	<table id="load" align="center" style="width:1260px;margin-top:10px;"></table>
+	<table id="load" align="center" style="width:1260px;margin-top:30px;"></table>
 </body>
 </html>
+

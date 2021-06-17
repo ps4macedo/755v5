@@ -207,6 +207,9 @@ function toggle_payload(pld){
 	}else if(pld == "lamance132"){
 		document.getElementById("progress").innerHTML="Carregando o lamance132... Por favor, AGUARDE!!!";
 		preloadScripts(['preloader.js', 'lamance132.js', 'loader.js']);
+	}else if(pld == "toolbox"){
+		document.getElementById("progress").innerHTML="Carregando ToolBox... Por favor, AGUARDE!!!";
+		preloadScripts(['preloader.js', 'toolbox.js', 'loader.js']);
 	}else if(pld == "rif"){
 		document.getElementById("progress").innerHTML="Carregando RIF... Por favor, AGUARDE!!!";
 		preloadScripts(['preloader.js', 'rif.js', 'loader.js']);
@@ -561,7 +564,8 @@ function sprayStringImpl(start, end) {
 }
 
 function go() {
-		if(localStorage.is755Cached){
+	var appCache = window.applicationCache;
+	if(appCache.status !== 1 && appCache.status !== 2){}else{
 		/* Init spray */
 		sprayHTMLTextArea();
 
